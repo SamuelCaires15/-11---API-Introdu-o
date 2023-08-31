@@ -1,6 +1,6 @@
 import express from "express";      // Requisição do pacote do express
 import dotenv from "dotenv";
-import { selectUsuarios, selectUsuario, insertUsuario, deleteUsuario, updateUsuario } from "./bd.js";
+import { selectUsuarios, selectUsuario, insertUsuario, deleteUsuario, updateUsuario } from "./db/bd.js";
 
 dotenv.config();
 
