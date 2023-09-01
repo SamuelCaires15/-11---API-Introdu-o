@@ -65,4 +65,14 @@ router.delete("/usuario/:id", async (req, res) => {
   }
 });
 
+router.get("/usuario", async (req, res) => {
+  console.log(`Rota GET /usuarios solicitada pelo usuario ${req.userId}`);
+  try {
+    const usuarios = await selectUsuarios();
+    res.json(usuarios);
+  } catch (error) {
+    res.status(error.status || 500).json({ message: error.message || "Erro!" });
+  }
+});
+
 export default router;
